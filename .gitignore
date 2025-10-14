@@ -1,0 +1,24 @@
+# General
+node_modules/
+dist/
+.env
+.env.*
+.DS_Store
+.idea/
+.vscode/
+*.log
+coverage/
+
+# OS
+Thumbs.db
+*.tmp
+
+# Angular build
+frontend/.angular/cache/
+
+# NestJS build
+backend/dist/
+backend/node_modules/
+
+# Docker
+infra/.env
