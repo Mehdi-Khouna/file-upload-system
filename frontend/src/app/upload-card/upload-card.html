@@ -1,0 +1,22 @@
+<div class="upload-card">
+  <h2>Upload a File</h2>
+
+  <div class="row">
+    <label class="choose-btn">
+      <input type="file" (change)="onFileSelected($event)" />
+      Choose File
+    </label>
+
+    <input
+      class="file-display"
+      type="text"
+      [value]="filename || ''"
+      placeholder="No file chosen"
+      disabled
+    />
+  </div>
+
+  <button class="upload-btn" [disabled]="!filename">
+    Upload
+  </button>
+</div>
