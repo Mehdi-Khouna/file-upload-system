@@ -6,15 +6,13 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class Upload {
-  private baseUrl = 'http://localhost:3000/files'; // we'll update later
+  private baseUrl = 'http://localhost:3000/files'; 
 
   constructor(private http: HttpClient) {}
 
   
 
-  /*uploadFile(){
-    console.log('File is uploaded')
-  }*/
+  
  uploadFile(file : File) : Observable<{key : string}> {
   const formData = new FormData();
   formData.append('file', file);
