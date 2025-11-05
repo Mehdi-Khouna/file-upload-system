@@ -16,7 +16,18 @@
     />
   </div>
 
-  <button class="upload-btn" [disabled]="!filename">
-    Upload
+  <button
+    class="upload-btn"
+    [disabled]="!filename || isUploading"
+    (click)="onFileUpload()"
+  >
+    {{ isUploading ? 'Uploading...' : 'Upload' }}
   </button>
+
+  @if(fileUrl) {
+    <div class="file-link">
+      <p>Uploaded successfully!</p>
+      <a [href]="fileUrl" target="_blank">View File</a>
+    </div>
+  }
 </div>
